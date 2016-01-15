@@ -45,10 +45,5 @@ linkedList.prototype.removeDuplicates = function() {
     }
 };
 
-var link = new linkedList('a');
-link.add('b');
-link.add('c');
-link.add('b');
-link.removeDuplicates();
-console.log("link", link)
+
 
