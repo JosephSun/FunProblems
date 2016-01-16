@@ -1,7 +1,7 @@
 //remove duplicates from an unsorted linked list
 
 //Functional Style
-
+// A function that builds the individual node objects. Each node object has a value property and a next property. 
 var Node = function(value){
   var node = {};
 
@@ -10,7 +10,6 @@ var Node = function(value){
 
   return node;
 };
-
 
 var LinkedList = function(){
   var list = {};
@@ -85,9 +84,6 @@ var LinkedList = function(){
 
   return list;
 };
-
-
-
 
 
 
