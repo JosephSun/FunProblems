@@ -1,5 +1,5 @@
 //remove duplicates from an unsorted linked list
-
+//
 //Functional Style
 // A function that builds the individual node objects. Each node object has a value property and a next property. 
 var Node = function(value){
@@ -15,7 +15,6 @@ var LinkedList = function(){
   var list = {};
   list.head = null;
   list.tail = null;
-
 
   //Time Complexity comment: O(1) === constant time because the function is creating a new Node (which has a constant time operation), changing variables refrences and checking variable refrences. All these operations are constant time.  
   //
@@ -79,6 +78,9 @@ var LinkedList = function(){
             nodeBefore.next = currentNode.next;
         }
     }
+    for (var j = list.head; j !== null; j = j.next) {
+      console.log("j",j);
+    }
 };
 
 
@@ -86,4 +88,11 @@ var LinkedList = function(){
 };
 
 
-
+var list1= LinkedList();
+list1.addToTail("a");
+list1.addToTail("b");
+list1.addToTail("a");
+list1.addToTail("c");
+list1.addToTail("a");
+console.log("List1 With duplicates", list1, '\n');
+list1.removeDuplicates();
