@@ -1,2 +1,2 @@
 # FunProblems
--Just a place for me to store some fun problems
+-Just a place for me to have some fun with data structures and algorithms 
