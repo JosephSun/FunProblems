@@ -11,7 +11,7 @@ var Tree = function(value){
 
 
 //the function that utilizes breadth first search. 
-Tree.prototype.BFSelect = function(filter) {
+Tree.prototype.breadthFirstSelect = function(filter) {
   var results = [];
   if (filter(this.value)) {
     results.push(this.value);
