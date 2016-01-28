@@ -11,10 +11,23 @@ Graph.prototype.addNode = function(node){
   this.size++;
 };
 
+//not optimized, does further recurison even when the path is found. 
 Graph.prototype.pathExists = function(firstNode, secondNode) {
-    var checkNodeEdges = function(nodeChecked) {
-    //     for (var i = 0; i < nodeChecked.edges)
-    };
+  var pathBetweenTwoNodes = false;
+  var checkNodeEdges = function(nodeChecked) {
+    if (nodeChecked.hasEdge(secondNode)) {
+      pathBetweenTwoNodes = true; 
+    } else if (nodeChecked.edge.length === 0) {
+        return; 
+    }else {
+      for (var i = 0; i < nodeChecked.edge.length; i++) {
+        checkNodeEdges(nodeChecked.edge[i]);
+      }
+    }
+  };
+  checkNodeEdges(firstNode);
+  return pathBetweenTwoNodes; 
+
 };
 Graph.prototype.contains = function(nodeValue){
   var foundNode = false;
