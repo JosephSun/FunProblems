@@ -13,7 +13,7 @@ Graph.prototype.addNode = function(node){
 
 Graph.prototype.pathExists = function(firstNode, secondNode) {
     var checkNodeEdges = function(nodeChecked) {
-        
+    //     for (var i = 0; i < nodeChecked.edges)
     };
 };
 Graph.prototype.contains = function(nodeValue){
@@ -40,9 +40,6 @@ Graph.prototype.addEdge = function(fromNode, toNode){
     if(this.storage[property].value === fromNode){
       this.storage[property].edge.push(toNode);
     } 
-     if(this.storage[property].value === toNode){
-      this.storage[property].edge.push(fromNode);
-    }
   }
 
 };
@@ -51,9 +48,9 @@ Graph.prototype.hasEdge = function(fromNode, toNode){
   var foundEdge = false;
   for (var property in this.storage){
     var neededNode = this.storage[property];
-    if(neededNode.value === fromNode ||  neededNode.value === toNode){
+    if(neededNode.value === fromNode){
       for(var i = 0; i < neededNode.edge.length; i++){
-        if(neededNode.edge[i] === fromNode || neededNode.edge[i] === toNode){
+        if(neededNode.edge[i] === toNode){
           foundEdge = true;
         }
       }
