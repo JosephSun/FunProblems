@@ -30,6 +30,3 @@ function sortIntersect(f, m) {
 
 }
 
-women = [8500, 8900, 7200, 1000, 4000, 7200, 9];
-men = [100, 7200, 8900, 1000, 7200, 6, 9];
-console.log(sortIntersect(women, men));
