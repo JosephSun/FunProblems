@@ -20,13 +20,11 @@ function sortIntersect(f, m) {
             agesForMales[m[j]] = 1; 
         }
     }
-
     for (var property in agesForFemales) {
         for (var l = 1; (l <= agesForFemales[property]) && (l <=agesForMales[property]); l++ ) {
             commonAges.push(parseInt(property));
         }
     }
     return commonAges.sort(helperSort).reverse();
-
 }
 
